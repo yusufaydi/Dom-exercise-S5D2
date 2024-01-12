@@ -31,8 +31,9 @@ let div_container = {
     return tmp_div;
   },
   generateImgs: function () {
-    let _self = this; //we declared a variable called _self to avoid from window object's this keyword.
+    let _self = this; //We declared a variable called _self to avoid from window object's this keyword. This keyword here will be attached to the object it is in thanks to _self variable.
     data_obj.getDataFromApi("http://googleapis.com/getImgs", function (imgs) {
+      //this.div_img = imgs; this keyword here works accordingly data_obj objects.
       _self.div_img = imgs;
       let containerDiv = document.getElementsByClassName("container")[0];
       for (let i = 0; i < imgs.length; i++) {
