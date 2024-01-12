@@ -69,7 +69,7 @@ let data_obj = {
     //img_arr = data;
     setTimeout(function () {
       //img_arr = data; we didnt  want to do this for all api data so we declared an array variable in div_container object called  div_img and we used this array variable to stores images coming through from api
-      cb && cb(img_arr);
+      cb && cb(data);
     }, 2000);
   },
 };
