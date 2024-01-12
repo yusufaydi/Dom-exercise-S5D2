@@ -31,7 +31,7 @@ let div_container = {
     return tmp_div;
   },
   generateImgs: function () {
-    let _self = this;
+    let _self = this; //we declared a variable called _self to avoid from window object's this keyword.
     data_obj.getDataFromApi("http://googleapis.com/getImgs", function (imgs) {
       _self.div_img = imgs;
       let containerDiv = document.getElementsByClassName("container")[0];
