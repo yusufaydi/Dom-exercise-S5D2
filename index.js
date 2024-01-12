@@ -31,9 +31,9 @@ let div_container = {
     return tmp_div;
   },
   generateImgs: function () {
-    let _self = this; //We declared a variable called _self to avoid from window object's this keyword. This keyword here will be attached to the object it is in thanks to _self variable.
+    let _self = this; //We declared a variable called _self to avoid from window object's this keyword. This keyword here will be attached to the object it is in thanks to _self variable. Windows nesnesinin this anahtar sözcüğünden kaçınmak için _self adında bir değişken tanımladık. This anahtar kelimesi _self değişkeni sayesinde bulunduğu nesneye eklenecektir.
     data_obj.getDataFromApi("http://googleapis.com/getImgs", function (imgs) {
-      //this.div_img = imgs; this keyword here works accordingly data_obj objects.
+      //this.div_img = imgs; this keyword here works accordingly data_obj objects.This anahtar kelimesi data_obj'ye göre çalışır.
       _self.div_img = imgs;
       let containerDiv = document.getElementsByClassName("container")[0];
       for (let i = 0; i < imgs.length; i++) {
@@ -69,7 +69,7 @@ let data_obj = {
     ];
     //img_arr = data;
     setTimeout(function () {
-      //img_arr = data; we didnt  want to do this for all api data so we declared an array variable in div_container object called  div_img and we used this array variable to stores images coming through from api
+      //img_arr = data; we didn't want to do this for all api data so we declare an array variable in div_container object called div_img and we used this array variable to stores images coming through from api. Bu işlemi tüm API verileri için yapmak istemedik, bu nedenle div_container nesnesinde div_img adında bir dizi değişkeni tanımladık ve bu dizi değişkenini api'den gelen img'leri depolamak için kullandık
       cb && cb(data);
     }, 2000);
   },
