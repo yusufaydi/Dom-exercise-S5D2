@@ -1,0 +1,125 @@
+/*
+    portrait
+The viewport is in a portrait orientation, i.e., the height is greater than or equal to the width.
+
+landscape
+The viewport is in a landscape orientation, i.e., the width is greater than the height.
+*/
+
+@media (max-width: 420px) and (orientation: portrait) {
+  .container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  img {
+    height: 100px;
+    width: 100px;
+  }
+}
+@media (min-width: 420px), screen and (orientation: landscape) {
+  .container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center; /*if flex:wrap you need to use align-content to position on cross axis*/
+    justify-content: space-around;
+    height: 300px;
+  }
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 760px) and (orientation: portrait) {
+  .container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  img {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (min-width: 760px) and (orientation: landscape) {
+  .container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center; /*if flex:wrap you need to use align-content to position on cross axis*/
+    justify-content: space-around;
+    height: 400px;
+  }
+  img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
+  .container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media (min-width: 760px) and (orientation: landscape) {
+  .container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center; /*if flex:wrap you need to use align-content to position on cross axis*/
+    justify-content: space-around;
+    height: 500px;
+  }
+  img {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  img {
+    height: 300px;
+    width: 300px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
+  }
+  img {
+    height: 400px;
+    width: 400px;
+  }
+}
